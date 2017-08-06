@@ -1,0 +1,4 @@
+name = Drupal Taxonomy Hack
+description = A module to correct Drupal "add term" in taxonomy
+core = 7.x
+version = 1.0
