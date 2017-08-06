@@ -1,0 +1,11 @@
+<?php 
+function drupal_taxonomy_hack_alter(&$items){
+  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['title callback'] = 'current_vocab';
+  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['title arguments'] = array(3);
+ 
+}
+ 
+function current_vocab($arg){
+$vocab_name = check_plain($arg->name);
+return t('Add new @vocab_name', array('@vocab_name' => $vocab_name));
+}
